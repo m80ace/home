@@ -48,9 +48,9 @@ $('a').each(function() {
       const messageElement = document.getElementById("device-message");
 
       if (isMobileOrTablet() > -1) {
-        messageElement.textContent = "You are using a mobile or tablet device.";
+        messageElement.innerHTML = '<a href="https://www.Youtube.com" target="_blank">Youtube</a>';
       } else {
-        messageElement.textContent = navigator.userAgent.toLowerCase() + "You are using a desktop device.";
+        messageElement.innerHTML = '<a href="https://www.abc.com" target="_blank">Visit ABC</a>';
       }
     });
 
