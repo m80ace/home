@@ -41,25 +41,7 @@ $('a').each(function() {
 </head>
 <body>
 
-<div id="device-message""></div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const messageElement = document.getElementById("device-message");
-
-      if (isMobileOrTablet() > -1) {
-        messageElement.innerHTML = '<a class="poplink" href="https://www.Youtube.com" target="ytm">Youtube</a>';
-      } 
-      //else {
-      //  messageElement.innerHTML = '.';
-      //}
-    });
-
-    function isMobileOrTablet() {
-      userAgent = navigator.userAgent.toLowerCase();
-      return userAgent.indexOf("mobi");
-    }
-  </script>
 
 
 	
@@ -69,6 +51,26 @@ $('a').each(function() {
 <table style="border: 1px solid rgb(188, 62, 98);" border="0" cellpadding="5" cellspacing="0" width="750">
   <tr>
     <td valign="top" width="33%"><b><span class="topic">Banks</span></b><br>
+
+    <div id="device-message""></div>
+
+    <script>
+    	document.addEventListener("DOMContentLoaded", function () {
+      	const messageElement = document.getElementById("device-message");
+
+      	if (isMobileOrTablet() > -1) {
+        	messageElement.innerHTML = '<a class="poplink" href="https://www.Youtube.com" target="ytm">Youtube</a>';
+      	} 
+      //else {
+      	//  messageElement.innerHTML = '.';
+      //}
+      });
+
+    	function isMobileOrTablet() {
+      		userAgent = navigator.userAgent.toLowerCase();
+      	return userAgent.indexOf("mobi");
+    	}
+    </script>
 		<a class="poplink" href="http://www.wellsfargo.com/" target="new1">Wells Fargo</a>, 
 		<a class="poplink" href="http://www.techcu.com/" target="new2">TechCU</a>, 
 		<a class="poplink" href="http://www.citibankonline.com/" target="new3">Citibank</a>, 
