@@ -41,17 +41,18 @@ $('a').each(function() {
 </head>
 <body>
 
-  <div id="device-message" style="font-size: 1.2em; margin-top: 20px;"></div>
+<div id="device-message""></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const messageElement = document.getElementById("device-message");
 
       if (isMobileOrTablet() > -1) {
-        messageElement.innerHTML = '<a href="https://www.Youtube.com" target="_blank">Youtube</a>';
-      } else {
-        messageElement.innerHTML = '<a href="https://www.abc.com" target="_blank">Visit ABC</a>';
-      }
+        messageElement.innerHTML = '<a class="poplink" href="https://www.Youtube.com" target="ytm">Youtube</a>';
+      } 
+      //else {
+      //  messageElement.innerHTML = '.';
+      //}
     });
 
     function isMobileOrTablet() {
