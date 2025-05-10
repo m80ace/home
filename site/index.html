@@ -41,6 +41,27 @@ $('a').each(function() {
 </head>
 <body>
 
+  <div id="device-message" style="font-size: 1.2em; margin-top: 20px;"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const messageElement = document.getElementById("device-message");
+
+      if (isMobileOrTablet() > -1) {
+        messageElement.textContent = "You are using a mobile or tablet device.";
+      } else {
+        messageElement.textContent = navigator.userAgent.toLowerCase() + "You are using a desktop device.";
+      }
+    });
+
+    function isMobileOrTablet() {
+      userAgent = navigator.userAgent.toLowerCase();
+      return userAgent.indexOf("mobi");
+    }
+  </script>
+
+
+	
 <br>
 <center>
 
